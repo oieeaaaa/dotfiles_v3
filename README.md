@@ -19,10 +19,10 @@ This setup works 50% of the time — use it with caution
 1. Install nvim LSPs
     1. Run `:LspInstallInfo`
     2. Install the following lsps by pressing `i` on its name
-      1. `tsserver`
-      2. `eslint`
-      3. `tailwindcss`
-      4. `stylelint_lsp`
+        1. `tsserver`
+        2. `eslint`
+        3. `tailwindcss`
+        4. `stylelint_lsp`
 1. (WSL Users only) Install [win32yank.exe](https://github.com/neovim/neovim/wiki/FAQ#how-to-use-the-windows-clipboard-from-wsl)
 1. Install [nerd fonts](https://www.nerdfonts.com/font-downloads) for nvim-tree icons
 1. have fun...
