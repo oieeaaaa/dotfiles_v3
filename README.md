@@ -8,8 +8,8 @@ This setup works 50% of the time — use it with caution
 1. `git clone git@github.com:oieeaaaa/dotfiles_v3.git`
 2. `cd dotfiles_v3`
 3. Install neovim's stable release
-  1. Go to [neovim v0.8.0](https://github.com/neovim/neovim/releases/tag/v0.8.0)
-  2. Follow the installation instructions based on your OS
+    1. Go to [neovim v0.8.0](https://github.com/neovim/neovim/releases/tag/v0.8.0)
+    2. Follow the installation instructions based on your OS
 1. `mkdir ~/.config && cp -R nvim ~/.config/nvim`
 1. Install packer `git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
