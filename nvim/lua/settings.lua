@@ -92,6 +92,3 @@ vim.cmd([[
   augroup END
 ]])
 
--- Color scheme, baby!
-vim.cmd('colorscheme gruvbox')
-
