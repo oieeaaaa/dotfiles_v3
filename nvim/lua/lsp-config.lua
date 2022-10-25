@@ -5,17 +5,15 @@ vim.o.completeopt = "menuone,noselect"
 -- Run :LspInstallInfo
 -- Install the required lsps below - e.g., prettier, eslint, tsserver, etc...
 vim.cmd [[autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll]]
- 
+
 require("nvim-lsp-installer").setup {}
- 
+
 -- Auto Format
 local null_ls = require("null-ls")
-
-null_ls.setup {}
-
 local prettier = require("prettier")
 
-prettier.setup {}
+null_ls.setup()
+prettier.setup{}
 
 -- Servers
 require'lspconfig'.pyright.setup{}

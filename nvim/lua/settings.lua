@@ -5,7 +5,8 @@ vim.g.mapleader = ' ' -- space
 
 -- having trouble? https://github.com/neovim/neovim/issues/19204
 -- Only enable on windows subsystems
-if vim.fn.has("wsl") then
+
+if vim.fn.has("wsl") ~= 0 then
   vim.g.clipboard = {
     name = 'win32yank-wsl',
     copy = {
