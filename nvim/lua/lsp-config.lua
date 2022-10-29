@@ -9,12 +9,14 @@ vim.cmd [[autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll]]
 require("nvim-lsp-installer").setup {}
 
 -- Servers
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.eslint.setup{}
-require'lspconfig'.tailwindcss.setup{}
-require'lspconfig'.stylelint_lsp.setup{}
-require'lspconfig'.sumneko_lua.setup {
+local lsp = require "lspconfig"
+
+lsp.pyright.setup{}
+lsp.tsserver.setup{}
+lsp.eslint.setup{}
+lsp.tailwindcss.setup{}
+lsp.stylelint_lsp.setup{}
+lsp.sumneko_lua.setup {
   settings = {
     Lua = {
       runtime = {

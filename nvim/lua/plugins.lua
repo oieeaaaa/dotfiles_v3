@@ -20,7 +20,9 @@ return require('packer').startup(function()
   }
   use 'kabouzeid/nvim-lspinstall'
   use 'glepnir/lspsaga.nvim'
-  use 'hrsh7th/nvim-compe'
+  use 'ms-jpq/coq_nvim'
+  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'numToStr/Comment.nvim' }
   use('jose-elias-alvarez/null-ls.nvim')
