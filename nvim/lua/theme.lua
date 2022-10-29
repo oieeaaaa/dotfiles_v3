@@ -3,6 +3,9 @@
 -- GRUVBOX
 vim.cmd('colorscheme gruvbox')
 
+-- Oceanic Next
+-- vim.cmd('colorscheme OceanicNext')
+
 --require('night').setup({}) -- or use contrast = false to not apply contrast
 
 -- TOKYO NIGHT
@@ -33,3 +36,16 @@ require("transparent").setup({
   },
   exclude = {}, -- table: groups you don't want to clear
 })
+
+require("colorizer").setup {
+  user_default_options = {
+    -- Available modes for `mode`: foreground, background,  virtualtext
+    mode = "virtualtext", -- Set the display mode.
+    tailwind = true, -- Enable tailwind colors
+    -- parsers can contain values used in |user_default_options|
+    sass = { enable = false, parsers = { css }, }, -- Enable sass colors
+    virtualtext = "■",
+  },
+  -- all the sub-options of filetypes apply to buftypes
+  buftypes = {},
+}

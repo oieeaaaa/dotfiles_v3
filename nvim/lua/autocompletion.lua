@@ -1,6 +1,6 @@
 -- Setup
 vim.g.coq_settings = {
-  auto_start = true,
+  auto_start = 'shut-up',
   keymap = {
     jump_to_mark = ''
   },
@@ -9,13 +9,9 @@ vim.g.coq_settings = {
       mode = 'short',
       mappings = {
         Variable = '✨',
-        Keyword = '🔑'
+        Keyword = '🔑',
+        Color = '🎨'
       }
     }
   }
 }
-
-local lsp = require "lspconfig"
-local coq = require"coq"
-
-lsp.tsserver.setup(coq.lsp_ensure_capabilities({}))

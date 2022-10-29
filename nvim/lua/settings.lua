@@ -2,6 +2,7 @@ HOME = os.getenv("HOME")
 
 -- global settings
 vim.g.mapleader = ' ' -- space
+vim.opt.termguicolors = true
 
 -- having trouble? https://github.com/neovim/neovim/issues/19204
 -- Only enable on windows subsystems
