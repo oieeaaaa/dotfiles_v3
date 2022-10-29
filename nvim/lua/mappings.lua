@@ -44,8 +44,8 @@ nmap('<C-k>', '<C-w>k')
 nmap('<C-l>', '<C-w>l')
 
 -- Tab navigation
-nmap('<C-]>', '<cmd>tabnext<cr>')
-nmap('<C-[>', '<cmd>tabprevious<cr>')
+nmap('<leader>tn', '<cmd>tabnext<cr>')
+nmap('<leader>tp', '<cmd>tabprevious<cr>')
 nmap('<leader>tt', '<cmd>tabnew<cr>') -- tab create
 nmap('<leader>te', '<cmd>tabc<cr>') -- tab end
 
@@ -79,7 +79,3 @@ nmap('<leader>n', '<cmd>NvimTreeToggle<cr>')
 nmap('<leader>gs', '<cmd>G<bar> :only<cr>');
 nmap('<leader>gf', '<cmd>diffget //2<cr>');
 nmap('<leader>gh', '<cmd>diffget //3<cr>');
-
--- NERD COMMENTER
-nmap('<leader>/ad', '<plug>NERDCommenterAltDelims');
-nmap('<leader>/s', '<plug>NERDCommenterSexy');

@@ -8,13 +8,6 @@ vim.cmd [[autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll]]
 
 require("nvim-lsp-installer").setup {}
 
--- Auto Format
-local null_ls = require("null-ls")
-local prettier = require("prettier")
-
-null_ls.setup()
-prettier.setup{}
-
 -- Servers
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.tsserver.setup{}

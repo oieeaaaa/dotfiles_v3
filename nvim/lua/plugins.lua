@@ -5,19 +5,13 @@ return require('packer').startup(function()
   use 'tpope/vim-fugitive' -- Git commands
   use 'vim-airline/vim-airline' -- powerline
   use 'vim-airline/vim-airline-themes'
-
-  use { 'lewis6991/gitsigns.nvim', -- git added/removed in sidebar + inline blame
-    requires = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('gitsigns').setup({
-        current_line_blame = false
-      })
-    end
-  }
+  use 'lewis6991/gitsigns.nvim'
 
   -- color schemes
   use 'gruvbox-community/gruvbox'
   use 'folke/tokyonight.nvim'
+  use 'navarasu/onedark.nvim'
+  use 'xiyaowong/nvim-transparent'
 
   -- general dev
   use {
@@ -28,7 +22,7 @@ return require('packer').startup(function()
   use 'glepnir/lspsaga.nvim'
   use 'hrsh7th/nvim-compe'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'scrooloose/nerdcommenter' -- commenting shortcuts
+  use { 'numToStr/Comment.nvim' }
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
 
