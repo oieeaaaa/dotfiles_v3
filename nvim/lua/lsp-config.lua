@@ -4,7 +4,6 @@ vim.o.completeopt = "menuone,noselect"
 -- TODO: On Fresh installs
 -- Run :LspInstallInfo
 -- Install the required lsps below - e.g., prettier, eslint, tsserver, etc...
-vim.cmd [[autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll]]
 
 require("nvim-lsp-installer").setup {}
 
@@ -16,6 +15,7 @@ lsp.tsserver.setup{}
 lsp.eslint.setup{}
 lsp.tailwindcss.setup{}
 lsp.stylelint_lsp.setup{}
+lsp.prismals.setup{}
 lsp.sumneko_lua.setup {
   settings = {
     Lua = {
