@@ -1,7 +1,7 @@
 -- Color scheme
 
 -- GRUVBOX
-vim.cmd('colorscheme gruvbox')
+-- vim.cmd('colorscheme gruvbox')
 
 -- Oceanic Next
 -- vim.cmd('colorscheme OceanicNext')
@@ -15,14 +15,14 @@ vim.cmd('colorscheme gruvbox')
 --vim.cmd[[colorscheme tokyonight-moon]]
 
 -- ONEDARK
---[[ require('onedark').setup {
+require('onedark').setup {
     style = 'darker',
     transparent = false,
     term_colors = true,
     toggle_style_key = '<Leader>ts',
     toggle_style_list = {'dark', 'darker'},
 }
-require('onedark').load() ]]
+require('onedark').load()
 
 
 -- Airline
@@ -30,7 +30,7 @@ vim.g.airline_theme = 'term'
 
 -- TRANSPARENT
 require("transparent").setup({
-  enable = true, -- boolean: enable transparent
+  enable = false, -- boolean: enable transparent
   extra_groups = { -- table/string: additional groups that should be cleared
     -- In particular, when you set it to 'all', that means all available groups
   },
