@@ -10,12 +10,11 @@ require("nvim-lsp-installer").setup {}
 -- Servers
 local lsp = require "lspconfig"
 
-lsp.pyright.setup{}
-lsp.tsserver.setup{}
-lsp.eslint.setup{}
-lsp.tailwindcss.setup{}
-lsp.stylelint_lsp.setup{}
-lsp.prismals.setup{}
+lsp.pyright.setup {}
+lsp.tsserver.setup {}
+lsp.tailwindcss.setup {}
+lsp.stylelint_lsp.setup {}
+lsp.prismals.setup {}
 lsp.sumneko_lua.setup {
   settings = {
     Lua = {
@@ -25,7 +24,7 @@ lsp.sumneko_lua.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
@@ -39,4 +38,4 @@ lsp.sumneko_lua.setup {
   },
 }
 
-require'lspsaga'.init_lsp_saga {}
+require 'lspsaga'.init_lsp_saga {}

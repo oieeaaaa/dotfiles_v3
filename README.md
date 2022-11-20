@@ -5,6 +5,11 @@ This setup works 50% of the time — use it with caution
 
 ### Requirements:
 
+```
+npm install -g @fsouza/prettierd
+npm install -g eslint_d
+```
+
 1. `git clone git@github.com:oieeaaaa/dotfiles_v3.git`
 1. `cd dotfiles_v3`
 1. Install neovim's stable release

@@ -51,4 +51,5 @@ return require('packer').startup(function()
   use { 'HerringtonDarkholme/yats.vim', ft = 'typescript' }
   use { 'posva/vim-vue' } -- Vue highlighting
   use 'othree/javascript-libraries-syntax.vim'
+  use 'MunifTanjim/eslint.nvim'
 end)
