@@ -1,4 +1,3 @@
-local prettier = require("prettier")
 -- local eslint = require("eslint")
 local null_ls = require("null-ls")
 

@@ -1,3 +1,6 @@
+vim.cmd [[set shortmess+=c]]
+vim.o.completeopt = "menuone,noselect"
+
 local cmp = require'cmp'
 local luasnip = require'luasnip'
 local kind_icons = {

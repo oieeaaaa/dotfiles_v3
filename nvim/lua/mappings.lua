@@ -2,9 +2,9 @@ vim.cmd('noremap <leader>/ :noh<cr>:call clearmatches()<cr>') -- clear matches
 
 function map(mode, shortcut, command)
   vim.api.nvim_set_keymap(
-    mode, 
-    shortcut, 
-    command, 
+    mode,
+    shortcut,
+    command,
     { noremap = true, silent = true }
   )
 end
@@ -34,10 +34,17 @@ nmap('<leader>w', '<cmd>w<cr>'); -- save
 nmap('<leader>q', '<cmd>q<cr>'); -- quit
 nmap('<leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>');
 nmap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>');
+vim.keymap.set('x', '<leader>p', "\"_dP") -- paste and preserve
 
 -- keep search matches in the middle of the window
 nmap('n', 'nzzzv')
 nmap('N', 'Nzzzv')
+
+-- blazingly fast movement
+vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv") -- move highlighted to the bottom
+vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv") -- move highlighted to the top
+nmap('<C-d>', '<C-d>zz');
+nmap('<C-u>', '<C-u>zz');
 
 -- Easy buffer navigation
 nmap('<C-h>', '<C-w>h')
