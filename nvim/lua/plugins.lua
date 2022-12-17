@@ -8,11 +8,11 @@ return require('packer').startup(function()
   use 'lewis6991/gitsigns.nvim'
 
   -- color schemes
-  use 'gruvbox-community/gruvbox'
-  use 'folke/tokyonight.nvim'
+  -- use 'gruvbox-community/gruvbox'
+  -- use 'folke/tokyonight.nvim'
   use 'navarasu/onedark.nvim'
-  use 'xiyaowong/nvim-transparent'
-  use 'mhartington/oceanic-next'
+  -- use 'xiyaowong/nvim-transparent'
+  -- use 'mhartington/oceanic-next'
   use 'NvChad/nvim-colorizer.lua'
 
   -- general dev
@@ -21,7 +21,6 @@ return require('packer').startup(function()
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
-  use 'glepnir/lspsaga.nvim'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'numToStr/Comment.nvim' }
   use('jose-elias-alvarez/null-ls.nvim')
@@ -40,11 +39,11 @@ return require('packer').startup(function()
   use 'rafamadriz/friendly-snippets'
 
   -- search
-  use { 
+  use {
     'nvim-telescope/telescope.nvim', requires = {
-      {'nvim-lua/popup.nvim'}, 
+      {'nvim-lua/popup.nvim'},
       {'nvim-lua/plenary.nvim'},
-    } 
+    }
   }
   use 'tpope/vim-eunuch' -- wrappers UNIX commands
   use 'tpope/vim-surround' -- surround characters shortcuts
@@ -57,7 +56,7 @@ return require('packer').startup(function()
   } -- file browser
 
   -- javascript
-  use { 'HerringtonDarkholme/yats.vim', ft = 'typescript' }
+  -- use { 'HerringtonDarkholme/yats.vim', ft = 'typescript' }
   use { 'posva/vim-vue' } -- Vue highlighting
   use 'othree/javascript-libraries-syntax.vim'
   use 'MunifTanjim/eslint.nvim'

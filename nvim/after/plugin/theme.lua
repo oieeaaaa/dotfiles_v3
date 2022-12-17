@@ -24,19 +24,10 @@ require('onedark').setup {
 }
 require('onedark').load()
 
-
 -- Airline
 vim.g.airline_theme = 'term'
 
 -- TRANSPARENT
-require("transparent").setup({
-  enable = false, -- boolean: enable transparent
-  extra_groups = { -- table/string: additional groups that should be cleared
-    -- In particular, when you set it to 'all', that means all available groups
-  },
-  exclude = {}, -- table: groups you don't want to clear
-})
-
 require("colorizer").setup {
   user_default_options = {
     -- Available modes for `mode`: foreground, background,  virtualtext
