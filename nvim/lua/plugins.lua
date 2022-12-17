@@ -17,18 +17,27 @@ return require('packer').startup(function()
 
   -- general dev
   use {
-      "williamboman/nvim-lsp-installer",
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
-  use 'kabouzeid/nvim-lspinstall'
   use 'glepnir/lspsaga.nvim'
-  use 'ms-jpq/coq_nvim'
-  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
-  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'numToStr/Comment.nvim' }
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')
+
+  -- autocomplete
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  -- snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'rafamadriz/friendly-snippets'
 
   -- search
   use { 

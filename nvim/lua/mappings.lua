@@ -30,6 +30,8 @@ function tmap(shortcut, command)
 end
 
 -- general dev
+nmap('<leader>w', '<cmd>w<cr>'); -- save
+nmap('<leader>q', '<cmd>q<cr>'); -- quit
 nmap('<leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>');
 nmap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>');
 
@@ -62,8 +64,9 @@ nmap('ss', '<C-w>s')
 -- TELESCOPE
 nmap("<leader>ff", "<cmd>Telescope git_files<cr>") -- with respect to .gitignore
 nmap("<leader>fa", "<cmd>Telescope find_files<cr>") -- find all
+nmap("<leader>fg", "<cmd>Telescope git_status<cr>") -- find all git affected changes
 nmap("<leader>fb", "<cmd>Telescope buffers<cr>") -- find buffers
-nmap("<leader>fs", "<cmd>Telescope live_grep<cr>") -- find buffers
+nmap("<leader>fs", "<cmd>Telescope live_grep<cr>") -- find strings
 nmap("<leader>dd", "<cmd>Telescope lsp_definitions<cr>")
 nmap("<leader>dr", "<cmd>Telescope lsp_references<cr>")
 nmap("<leader>di", "<cmd>Telescope lsp_implementations<cr>")
