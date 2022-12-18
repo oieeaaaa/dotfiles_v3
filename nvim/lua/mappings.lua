@@ -77,6 +77,9 @@ nmap('<leader>rr', '<cmd>Lspsaga rename<cr>')
 -- NVIM TREE
 nmap('<leader>e', '<cmd>NvimTreeFindFile<cr>')
 nmap('<leader>n', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set("n", "<leader>mn", require("nvim-tree.api").marks.navigate.next)
+vim.keymap.set("n", "<leader>mp", require("nvim-tree.api").marks.navigate.prev)
+vim.keymap.set("n", "<leader>ms", require("nvim-tree.api").marks.navigate.select)
 
 -- GIT (VIM FUGITIVE)
 nmap('<leader>gs', '<cmd>G<bar> :only<cr>')

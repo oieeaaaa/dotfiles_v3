@@ -7,7 +7,7 @@ require('lspsaga').init_lsp_saga()
 require("mason").setup()
 
 mason_lsp.setup({
-  ensure_installed = { "tsserver", "sumneko_lua", "tailwindcss" }
+  ensure_installed = { "tsserver", "sumneko_lua", "tailwindcss", "eslint" }
 })
 
 mason_lsp.setup_handlers({
