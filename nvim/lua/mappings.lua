@@ -1,6 +1,6 @@
 vim.cmd('noremap <leader>/ :noh<cr>:call clearmatches()<cr>') -- clear matches
 
-function map(mode, shortcut, command)
+local map = function(mode, shortcut, command)
   vim.api.nvim_set_keymap(
     mode,
     shortcut,
@@ -9,31 +9,31 @@ function map(mode, shortcut, command)
   )
 end
 
-function nmap(shortcut, command)
+local nmap = function(shortcut, command)
   map('n', shortcut, command)
 end
 
-function imap(shortcut, command)
-  map('i', shortcut, command)
-end
-
-function vmap(shortcut, command)
+local vmap = function(shortcut, command)
   map('v', shortcut, command)
 end
 
-function cmap(shortcut, command)
+--[[ local imap = function(shortcut, command)
+  map('i', shortcut, command)
+end
+
+local cmap = function(shortcut, command)
   map('c', shortcut, command)
 end
 
-function tmap(shortcut, command)
+local tmap = function(shortcut, command)
   map('t', shortcut, command)
-end
+end ]]
 
 -- general dev
 nmap('<leader>w', '<cmd>w<cr>'); -- save
 nmap('<leader>q', '<cmd>q<cr>'); -- quit
-nmap('<leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>');
-nmap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>');
+nmap('<leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>')
+nmap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
 vim.keymap.set('x', '<leader>p', "\"_dP") -- paste and preserve
 
 -- keep search matches in the middle of the window
@@ -41,10 +41,10 @@ nmap('n', 'nzzzv')
 nmap('N', 'Nzzzv')
 
 -- blazingly fast movement
-vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv") -- move highlighted to the bottom
-vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv") -- move highlighted to the top
-nmap('<C-d>', '<C-d>zz');
-nmap('<C-u>', '<C-u>zz');
+vmap('J', ":m '>+1<cr>gv=gv") -- move highlighted to the bottom
+vmap('K', ":m '<-2<cr>gv=gv") -- move highlighted to the top
+nmap('<C-d>', '<C-d>zz')
+nmap('<C-u>', '<C-u>zz')
 
 -- Easy buffer navigation
 nmap('<C-h>', '<C-w>h')
@@ -86,6 +86,6 @@ nmap('<leader>e', '<cmd>NvimTreeFindFile<cr>')
 nmap('<leader>n', '<cmd>NvimTreeToggle<cr>')
 
 -- GIT (VIM FUGITIVE)
-nmap('<leader>gs', '<cmd>G<bar> :only<cr>');
-nmap('<leader>gf', '<cmd>diffget //2<cr>');
-nmap('<leader>gh', '<cmd>diffget //3<cr>');
+nmap('<leader>gs', '<cmd>G<bar> :only<cr>')
+nmap('<leader>gf', '<cmd>diffget //2<cr>')
+nmap('<leader>gh', '<cmd>diffget //3<cr>')

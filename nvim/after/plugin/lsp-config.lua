@@ -1,4 +1,6 @@
 local lspconfig = require("lspconfig")
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require("mason").setup()
 require("mason-lspconfig").setup_handlers({
@@ -6,7 +8,9 @@ require("mason-lspconfig").setup_handlers({
    -- and will be called for each installed server that doesn't have
    -- a dedicated handler.
    function (server_name) -- default handler (optional)
-       lspconfig[server_name].setup {}
+    lspconfig[server_name].setup {
+      capabilities = capabilities,
+    }
    end,
    ["sumneko_lua"] = function ()
        lspconfig.sumneko_lua.setup {
