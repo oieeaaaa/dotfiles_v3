@@ -22,6 +22,7 @@ return require('packer').startup(function()
       "neovim/nvim-lspconfig",
   }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'glepnir/lspsaga.nvim', branch = 'main' }
   use { 'numToStr/Comment.nvim' }
   use('jose-elias-alvarez/null-ls.nvim')
   use('MunifTanjim/prettier.nvim')

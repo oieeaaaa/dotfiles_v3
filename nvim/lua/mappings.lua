@@ -1,5 +1,3 @@
-vim.cmd('noremap <leader>/ :noh<cr>:call clearmatches()<cr>') -- clear matches
-
 local map = function(mode, shortcut, command)
   vim.api.nvim_set_keymap(
     mode,
@@ -17,24 +15,17 @@ local vmap = function(shortcut, command)
   map('v', shortcut, command)
 end
 
---[[ local imap = function(shortcut, command)
-  map('i', shortcut, command)
+local xmap = function(shortcut, command)
+  map('x', shortcut, command)
 end
-
-local cmap = function(shortcut, command)
-  map('c', shortcut, command)
-end
-
-local tmap = function(shortcut, command)
-  map('t', shortcut, command)
-end ]]
 
 -- general dev
+nmap('<leader>/', ':noh<cr>:call clearmatches()<cr>') -- clear matches
 nmap('<leader>w', '<cmd>w<cr>'); -- save
 nmap('<leader>q', '<cmd>q<cr>'); -- quit
-nmap('<leader>k', '<cmd>lua vim.diagnostic.open_float()<cr>')
-nmap('<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<cr>')
-vim.keymap.set('x', '<leader>p', "\"_dP") -- paste and preserve
+nmap('<leader>k', '<cmd>Lspsaga hover_doc<cr>')
+nmap('<leader>ca', '<cmd>Lspsaga code_action<cr>')
+xmap('<leader>p', '\"_dP') -- paste and preserve
 
 -- keep search matches in the middle of the window
 nmap('n', 'nzzzv')
@@ -51,6 +42,8 @@ nmap('<C-h>', '<C-w>h')
 nmap('<C-j>', '<C-w>j')
 nmap('<C-k>', '<C-w>k')
 nmap('<C-l>', '<C-w>l')
+nmap('<leader>o', '<C-w>o')
+nmap('<leader>bc', '<cmd>w | %bd | e# | bd#<cr>') -- clear all buffers except the current one
 
 -- Tab navigation
 nmap('<leader>tn', '<cmd>tabnext<cr>')

@@ -50,6 +50,11 @@ cmp.setup({
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
   },
+  performance = {
+    trigger_debounce_time = 300,
+    throttle = 350,
+    fetching_timeout = 80,
+  },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -80,13 +85,13 @@ cmp.setup({
     end
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
+    { name = 'nvim_lsp', keyword_length = 5, max_item_count = 15 },
     -- { name = 'vsnip' }, -- For vsnip users.
-    { name = 'luasnip' }, -- For luasnip users.
+    { name = 'luasnip', keyword_length = 5 }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
   }, {
-    { name = 'buffer'},
+    { name = 'buffer' },
   }),
   formatting = {
     fields = { "kind", "abbr", "menu" },
