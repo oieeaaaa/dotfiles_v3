@@ -9,7 +9,8 @@ require'nvim-treesitter.configs'.setup {
     "rust",
     "tsx",
     "css",
-    "json"
+    "json",
+    "svelte"
   },
 
   highlight = {

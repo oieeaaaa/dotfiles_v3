@@ -7,10 +7,6 @@ require('nvim-tree').setup {
   view = {
     adaptive_size = true,
     centralize_selection = true,
-
-    -- Play with this for a week to see if it's worth adding
-    number = true,
-    relativenumber = true,
   },
   diagnostics = {
     enable = true,
