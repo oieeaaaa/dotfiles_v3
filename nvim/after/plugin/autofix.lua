@@ -6,9 +6,12 @@ local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false 
 local event = "BufWritePre" -- or "BufWritePost"
 local async = event == "BufWritePost"
 
+
 local sources = {
   formatting.eslint_d,
-  formatting.prettierd
+  formatting.prettierd.with({
+     extra_filetypes = { "svelte" },
+  })
 }
 
 null_ls.setup({
