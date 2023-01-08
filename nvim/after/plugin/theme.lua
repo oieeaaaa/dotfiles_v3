@@ -26,17 +26,3 @@ require('onedark').load()
 
 -- Airline
 vim.g.airline_theme = 'term'
-
--- TRANSPARENT
-require("colorizer").setup {
-  user_default_options = {
-    -- Available modes for `mode`: foreground, background,  virtualtext
-    mode = "virtualtext", -- Set the display mode.
-    tailwind = true, -- Enable tailwind colors
-    -- parsers can contain values used in |user_default_options|
-    sass = { enable = false, parsers = { css }, }, -- Enable sass colors
-    virtualtext = "■",
-  },
-  -- all the sub-options of filetypes apply to buftypes
-  buftypes = {},
-}

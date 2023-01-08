@@ -13,7 +13,6 @@ return require('packer').startup(function()
   use 'navarasu/onedark.nvim'
   -- use 'xiyaowong/nvim-transparent'
   -- use 'mhartington/oceanic-next'
-  use 'NvChad/nvim-colorizer.lua'
 
   -- general dev
   use {
