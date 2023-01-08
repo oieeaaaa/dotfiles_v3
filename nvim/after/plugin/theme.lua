@@ -26,3 +26,10 @@ require('onedark').load()
 
 -- Airline
 vim.g.airline_theme = 'term'
+
+-- Color coding
+require 'colorizer'.setup {
+  user_default_options = {
+    tailwind = true
+  }
+}
