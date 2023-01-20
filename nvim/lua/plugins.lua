@@ -39,6 +39,10 @@ return require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'rafamadriz/friendly-snippets'
 
+  -- autopairs
+  use 'tpope/vim-surround' -- surround characters shortcuts
+  use 'windwp/nvim-ts-autotag' -- pair jsx and html tags
+
   -- search
   use {
     'nvim-telescope/telescope.nvim', requires = {
@@ -47,7 +51,6 @@ return require('packer').startup(function()
     }
   }
   use 'tpope/vim-eunuch' -- wrappers UNIX commands
-  use 'tpope/vim-surround' -- surround characters shortcuts
   use 'tpope/vim-vinegar' -- file browser
   use {
     'kyazdani42/nvim-tree.lua',

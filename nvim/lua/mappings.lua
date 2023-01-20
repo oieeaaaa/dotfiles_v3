@@ -23,8 +23,9 @@ end
 nmap('<leader>/', ':noh<cr>:call clearmatches()<cr>') -- clear matches
 nmap('<leader>w', '<cmd>w<cr>'); -- save
 nmap('<leader>q', '<cmd>q<cr>'); -- quit
-nmap('<leader>k', '<cmd>Lspsaga hover_doc<cr>')
+nmap('<leader>hd', '<cmd>Lspsaga hover_doc<cr>')
 nmap('<leader>ca', '<cmd>Lspsaga code_action<cr>')
+nmap('<leader>he', '<cmd>lua vim.diagnostic.open_float()<cr>')
 xmap('<leader>p', '\"_dP') -- paste and preserve
 
 -- keep search matches in the middle of the window

@@ -70,13 +70,16 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-vi-mode)
+plugins=(git zsh-vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+# if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
+export MANPAGER="nvim +Man!"
+# fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
