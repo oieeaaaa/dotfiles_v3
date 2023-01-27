@@ -46,6 +46,9 @@ cmp.setup({
       -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
     end,
   },
+  --[[ completion = {
+    autocomplete = false
+  }, ]]
   window = {
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
@@ -82,7 +85,7 @@ cmp.setup({
       else
         fallback()
       end
-    end
+    end,
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp', keyword_length = 5, max_item_count = 15 },
@@ -113,7 +116,7 @@ cmp.setup({
     select = false,
   },
   experimental = {
-    -- ghost_text = true,
+    ghost_text = false,
     -- native_menu = false
   }
 })
