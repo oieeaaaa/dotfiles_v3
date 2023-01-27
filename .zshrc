@@ -79,6 +79,9 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 # if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
 export MANPAGER="nvim +Man!"
+export TERM='xterm-256color'
+# export EDITOR='nvim'
+# export VISUAL='nvim'
 # fi
 
 # You may need to manually set your language environment
@@ -100,8 +103,12 @@ export MANPAGER="nvim +Man!"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias init-work="bash ~/.config/work-init.sh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Key bindings
+bindkey '^@' autosuggest-accept
+bindkey '\t' end-of-line
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
