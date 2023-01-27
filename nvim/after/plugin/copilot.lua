@@ -10,6 +10,7 @@ vim.g.copilot_filetypes = {
   ["c++"] = true,
   ["go"] = true,
   ["python"] = true,
+  ["php"] = true,
 }
 
 -- vim.g.copilot_no_tab_map = true

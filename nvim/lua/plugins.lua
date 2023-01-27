@@ -6,6 +6,7 @@ return require('packer').startup(function()
   use 'vim-airline/vim-airline' -- powerline
   use 'vim-airline/vim-airline-themes'
   use 'lewis6991/gitsigns.nvim'
+  use 'edkolev/tmuxline.vim'
 
   -- color schemes
   -- use 'gruvbox-community/gruvbox'
