@@ -11,6 +11,9 @@ vim.g.copilot_filetypes = {
   ["go"] = true,
   ["python"] = true,
   ["php"] = true,
+  ["markdown"] = true,
+  ["prisma"] = true,
+  ["css"] = true
 }
 
 -- vim.g.copilot_no_tab_map = true
