@@ -3,11 +3,11 @@ local mason_lsp = require("mason-lspconfig")
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-require('lspsaga').setup()
+require('lspsaga').setup({})
 require("mason").setup()
 
 mason_lsp.setup({
-  ensure_installed = { "tsserver", "sumneko_lua", "tailwindcss", "eslint" }
+  ensure_installed = { "tsserver", "tailwindcss", "eslint" }
 })
 
 mason_lsp.setup_handlers({

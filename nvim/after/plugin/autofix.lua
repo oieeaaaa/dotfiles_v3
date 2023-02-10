@@ -9,7 +9,7 @@ local async = event == "BufWritePost"
 
 local sources = {
   formatting.eslint_d,
-  formatting.prettierd.with({
+  formatting.prettier_d_slim.with({
      extra_filetypes = { "svelte" },
   })
 }

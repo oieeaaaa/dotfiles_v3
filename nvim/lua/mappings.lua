@@ -73,7 +73,8 @@ nmap("<leader>dr", "<cmd>Telescope lsp_references<cr>")
 nmap("<leader>di", "<cmd>Telescope lsp_implementations<cr>")
 
 -- LSP
-nmap('<leader>rr', '<cmd>Lspsaga rename<cr>')
+nmap('<leader>rr', '<cmd>Lspsaga rename<cr>') -- within file
+nmap('<leader>rg', '<cmd>Lspsaga rename ++project<cr>') -- global
 
 -- NVIM TREE
 nmap('<leader>e', '<cmd>NvimTreeFindFile<cr>')

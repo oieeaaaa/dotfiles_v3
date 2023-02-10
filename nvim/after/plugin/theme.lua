@@ -15,14 +15,22 @@
 --vim.cmd[[colorscheme tokyonight-moon]]
 
 -- ONEDARK
-require('onedark').setup {
+--[[ require('onedark').setup {
     style = 'darker',
     transparent = false,
     term_colors = true,
     toggle_style_key = '<Leader>ts',
     toggle_style_list = {'dark', 'darker'},
-}
-require('onedark').load()
+} ]]
+-- require('onedark').load()
+
+-- Github
+--[[ require('github-theme').setup({
+  theme_style = 'dark_default',
+}) ]]
+
+-- Onedark Pro
+vim.cmd[[colorscheme onedark]]
 
 -- Airline
 vim.g.airline_theme = 'term'
