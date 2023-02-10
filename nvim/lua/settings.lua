@@ -28,6 +28,7 @@ vim.o.backspace = "indent,eol,start" -- backspace works on every char in insert 
 vim.o.completeopt = 'menuone,noselect'
 vim.o.history = 1000
 vim.o.clipboard = 'unnamedplus' -- always use clibboard on all operations
+vim.o.mouse = 'c' -- disable mouse
 
 -- Mapping waiting time
 vim.o.timeout = false

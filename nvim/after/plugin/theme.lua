@@ -30,10 +30,13 @@
 }) ]]
 
 -- Onedark Pro
+require('onedarkpro').setup({
+  curosorline = true,
+  options = {
+    cursorline = true,
+  },
+})
 vim.cmd[[colorscheme onedark]]
-
--- Airline
-vim.g.airline_theme = 'term'
 
 -- Color coding
 require 'colorizer'.setup {

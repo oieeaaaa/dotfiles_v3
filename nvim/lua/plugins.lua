@@ -3,10 +3,15 @@ return require('packer').startup(function()
 
   -- common
   use 'tpope/vim-fugitive' -- Git commands
-  use 'vim-airline/vim-airline' -- powerline
-  use 'vim-airline/vim-airline-themes'
+  use 'nvim-lualine/lualine.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'edkolev/tmuxline.vim'
+  use {
+    "startup-nvim/startup.nvim",
+    config = function()
+      require"startup".setup()
+    end
+  }
 
   -- color schemes
   -- use 'gruvbox-community/gruvbox'
@@ -62,6 +67,7 @@ return require('packer').startup(function()
       'kyazdani42/nvim-web-devicons', -- for file icon
     }
   } -- file browser
+  use "folke/todo-comments.nvim"
 
   -- javascript
   -- use { 'HerringtonDarkholme/yats.vim', ft = 'typescript' }
