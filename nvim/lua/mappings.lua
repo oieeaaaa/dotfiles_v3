@@ -21,8 +21,8 @@ end
 
 -- general dev
 nmap('<leader>/', ':noh<cr>:call clearmatches()<cr>') -- clear matches
-nmap('<leader>w', '<cmd>w<cr>'); -- save
-nmap('<leader>q', '<cmd>q<cr>'); -- quit
+nmap('<leader>w', '<cmd>w<cr>') -- save
+nmap('<leader>q', '<cmd>q<cr>') -- quit
 xmap('<leader>p', '\"_dP') -- paste and preserve
 
 -- keep search matches in the middle of the window

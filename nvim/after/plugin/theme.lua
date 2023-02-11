@@ -1,3 +1,4 @@
+local c = require('colors.sidebar')
 -- Color scheme
 
 -- GRUVBOX
@@ -32,6 +33,19 @@
 -- Onedark Pro
 require('onedarkpro').setup({
   curosorline = true,
+  highlights = {
+    NvimTreeNormal = { fg = c.fg },
+    NvimTreeRootFolder = { fg = c.orange, fmt = "bold" },
+    NvimTreeGitDirty = { fg = c.yellow },
+    NvimTreeGitNew = { fg = c.green },
+    NvimTreeGitDeleted = { fg = c.red },
+    NvimTreeSpecialFile = { fg = c.yellow, fmt = "underline" },
+    NvimTreeIndentMarker = { fg = c.fg },
+    NvimTreeImageFile = { fg = c.dark_purple },
+    NvimTreeSymlink = { fg = c.purple },
+    NvimTreeFolderName = { fg = c.blue },
+    NvimTreeFolderIcon = { fg = c.yellow },
+  },
   options = {
     cursorline = true,
   },

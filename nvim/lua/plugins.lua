@@ -6,17 +6,11 @@ return require('packer').startup(function()
   use 'nvim-lualine/lualine.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'edkolev/tmuxline.vim'
-  use {
-    "startup-nvim/startup.nvim",
-    config = function()
-      require"startup".setup()
-    end
-  }
 
   -- color schemes
   -- use 'gruvbox-community/gruvbox'
   -- use 'folke/tokyonight.nvim'
-  -- use 'navarasu/onedark.nvim'
+  use 'navarasu/onedark.nvim'
   -- use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
   use "olimorris/onedarkpro.nvim"
   -- use 'xiyaowong/nvim-transparent'
