@@ -19,15 +19,4 @@ mason_lsp.setup_handlers({
       capabilities = capabilities,
     }
    end,
-   ["sumneko_lua"] = function ()
-       lspconfig.sumneko_lua.setup {
-           settings = {
-               Lua = {
-                   diagnostics = {
-                       globals = { "vim", "use" }
-                   }
-               }
-           }
-       }
-   end,
 })
