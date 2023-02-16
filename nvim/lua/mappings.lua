@@ -53,6 +53,10 @@ nmap('ss', '<C-w>s')
 
 -- PLUGINS
 
+-- COLORSCHEMES
+nmap('<leader>1', '<cmd>colorscheme kanagawa<cr>')
+nmap('<leader>2', '<cmd>colorscheme onedark<cr>')
+
 -- TELESCOPE
 nmap("<leader>ff", "<cmd>Telescope git_files<cr>") -- with respect to .gitignore
 nmap("<leader>fa", "<cmd>Telescope find_files<cr>") -- find all
