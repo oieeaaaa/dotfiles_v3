@@ -2,6 +2,7 @@ vim.g.copilot_filetypes = {
   ["*"] = false,
   ["javascript"] = true,
   ["typescript"] = true,
+  ["typescriptreact"] = true,
   ["svelte"] = true,
   ["lua"] = true,
   ["rust"] = true,
