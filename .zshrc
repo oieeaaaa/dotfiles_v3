@@ -119,4 +119,5 @@ export GPG_TTY=$(tty)
 # pnpm
 export PNPM_HOME="/home/joe/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+# pnpm endexport PATH="/home/linuxbrew/.linuxbrew/opt/php@8.1/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/opt/php@8.1/sbin:$PATH"

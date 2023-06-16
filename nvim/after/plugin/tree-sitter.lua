@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
     "tsx",
     "css",
     "json",
-    "svelte"
+    "svelte",
   },
 
   auto_install = true,

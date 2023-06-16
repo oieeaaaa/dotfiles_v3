@@ -14,7 +14,10 @@ vim.g.copilot_filetypes = {
   ["php"] = true,
   ["markdown"] = true,
   ["prisma"] = true,
-  ["css"] = true
+  ["css"] = true,
+  ["cshtml"] = true,
+  ["html"] = true,
+  ["json"] = true
 }
 
 -- vim.g.copilot_no_tab_map = true
