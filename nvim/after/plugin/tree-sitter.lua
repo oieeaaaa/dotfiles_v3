@@ -1,3 +1,5 @@
+require('nvim-ts-autotag').setup()
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
@@ -34,7 +36,14 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
 
+  -- TODO: fix this auto close in react not working properly
   autotag = {
-    enable = true
+    enable = true,
+    filetypes = {
+      "html",
+      "javascript",
+      "typescript",
+      "go"
+    },
   }
 }

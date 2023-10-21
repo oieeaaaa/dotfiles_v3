@@ -10,7 +10,11 @@ local async = event == "BufWritePost"
 local sources = {
   formatting.eslint_d,
   formatting.prettier_d_slim.with({
-     extra_filetypes = { "svelte", "cshtml", "razor" },
+     extra_filetypes = {
+      "svelte",
+      "cshtml",
+      "razor"
+    },
   })
 }
 

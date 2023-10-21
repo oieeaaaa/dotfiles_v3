@@ -9,14 +9,15 @@ return require('packer').startup(function()
 
   -- color schemes
   -- use 'gruvbox-community/gruvbox'
-  -- use 'folke/tokyonight.nvim'
-  use 'navarasu/onedark.nvim'
+  use 'folke/tokyonight.nvim'
+  -- use 'navarasu/onedark.nvim'
   -- use ({ 'projekt0n/github-nvim-theme', tag = 'v0.0.7' })
-  use "olimorris/onedarkpro.nvim"
+  -- use "olimorris/onedarkpro.nvim"
   use "rebelot/kanagawa.nvim"
   -- use 'xiyaowong/nvim-transparent'
   -- use 'mhartington/oceanic-next'
   use 'NvChad/nvim-colorizer.lua'
+  use 'folke/tokyonight.nvim'
 
   -- general dev
   use {

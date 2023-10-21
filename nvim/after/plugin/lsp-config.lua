@@ -19,5 +19,37 @@ mason_lsp.setup_handlers({
     lspconfig[server_name].setup {
       capabilities = capabilities,
     }
+
+    if server_name == "tailwindcss" then
+      lspconfig[server_name].setup {
+        capabilities = capabilities,
+        filetypes = {
+          "html",
+          "css",
+          "scss",
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "svelte",
+          "vue",
+          "markdown",
+          "mdx",
+        },
+        settings = {
+          tailwindCSS = {
+            lint = {
+              cssConflict = "warning",
+              invalidApply = "error",
+              invalidConfigPath = "error",
+              invalidScreen = "error",
+              invalidTailwindDirective = "error",
+              invalidVariant = "error",
+              recommendedVariantOrder = "warning",
+            },
+          },
+        },
+      }
+    end
    end,
 })

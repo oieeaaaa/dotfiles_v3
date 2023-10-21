@@ -10,7 +10,7 @@ local c = require('colors.sidebar')
 --require('night').setup({}) -- or use contrast = false to not apply contrast
 
 -- TOKYO NIGHT
---vim.cmd[[colorscheme tokyonight]]
+-- vim.cmd[[colorscheme tokyonight]]
 --vim.cmd[[colorscheme tokyonight-storm]]
 --vim.cmd[[colorscheme tokyonight-day]]
 --vim.cmd[[colorscheme tokyonight-moon]]
@@ -30,28 +30,7 @@ local c = require('colors.sidebar')
   theme_style = 'dark_default',
 }) ]]
 
--- Onedark Pro
-require('onedarkpro').setup({
-  curosorline = true,
-  highlights = {
-    NvimTreeNormal = { fg = c.fg },
-    NvimTreeRootFolder = { fg = c.orange, fmt = "bold" },
-    NvimTreeGitDirty = { fg = c.yellow },
-    NvimTreeGitNew = { fg = c.green },
-    NvimTreeGitDeleted = { fg = c.red },
-    NvimTreeSpecialFile = { fg = c.yellow, fmt = "underline" },
-    NvimTreeIndentMarker = { fg = c.fg },
-    NvimTreeImageFile = { fg = c.dark_purple },
-    NvimTreeSymlink = { fg = c.purple },
-    NvimTreeFolderName = { fg = c.blue },
-    NvimTreeFolderIcon = { fg = c.yellow },
-  },
-  options = {
-    cursorline = true,
-    transparency = false
-  },
-})
-
+-- Kanagawa
 vim.cmd[[colorscheme kanagawa]]
 
 -- Color coding
