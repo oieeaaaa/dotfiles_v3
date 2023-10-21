@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export VIMRUNTIME="$HOME/downloads/nvim-linux64/share/nvim/runtime/"
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -79,7 +82,13 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 # if [ -n "${NVIM_LISTEN_ADDRESS+x}" ]; then
 export MANPAGER="nvim +Man!"
-export TERM='xterm-256color'
+
+# only do this on mac device
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export TERM='xterm-256color'
+fi
+
 # export EDITOR='nvim'
 # export VISUAL='nvim'
 # fi
@@ -104,6 +113,7 @@ export TERM='xterm-256color'
 #
 # Example aliases
 alias init-work="bash ~/.config/work-init.sh"
+alias awscli="/usr/local/bin/aws"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Key bindings
@@ -121,3 +131,15 @@ export PNPM_HOME="/home/joe/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm endexport PATH="/home/linuxbrew/.linuxbrew/opt/php@8.1/bin:$PATH"
 export PATH="/home/linuxbrew/.linuxbrew/opt/php@8.1/sbin:$PATH"
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH="$HOME/go" # set GOPATH (path to where go is installed)
+export PATH=$PATH:$GOPATH/bin # append GOPATH to PATH 
+
+export LOCALSTACK_API_KEY=6Yp3m24xwF
+
+# Add DNS entry for windows host
+if ! $(cat /etc/hosts | grep -q 'winhost'); then
+  echo 'Adding DNS entry for Windows host in /etc/hosts'
+  echo '\n# Windows host - added via ~/.bashhrc' | sudo tee -a /etc/hosts
+  echo -e "$(grep nameserver /etc/resolv.conf | awk '{print $2, "   winhost"}')" | sudo tee -a /etc/hosts
+fi
