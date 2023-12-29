@@ -32,6 +32,7 @@ vim.o.mouse = 'c' -- disable mouse
 
 -- Mapping waiting time
 vim.o.timeout = false
+vim.o.timeoutlen = 100
 vim.o.ttimeoutlen = 100
 
 -- Display

@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export VIMRUNTIME="$HOME/downloads/nvim-linux64/share/nvim/runtime/"
+export VIMRUNTIME="$HOME/vendors/nvim-linux64/share/nvim/runtime"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -89,8 +89,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   export TERM='xterm-256color'
 fi
 
-# export EDITOR='nvim'
-# export VISUAL='nvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 # fi
 
 # You may need to manually set your language environment
@@ -112,7 +112,7 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias init-work="bash ~/.config/work-init.sh"
+alias init-work="bash ~/personal/scripts/init-work.sh"
 alias awscli="/usr/local/bin/aws"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -135,7 +135,8 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go" # set GOPATH (path to where go is installed)
 export PATH=$PATH:$GOPATH/bin # append GOPATH to PATH 
 
-export LOCALSTACK_API_KEY=6Yp3m24xwF
+# export LOCALSTACK_API_KEY=6Yp3m24xwF
+export LOCALSTACK_API_KEY=3B7BYy2YOH
 
 # Add DNS entry for windows host
 if ! $(cat /etc/hosts | grep -q 'winhost'); then
@@ -143,3 +144,6 @@ if ! $(cat /etc/hosts | grep -q 'winhost'); then
   echo '\n# Windows host - added via ~/.bashhrc' | sudo tee -a /etc/hosts
   echo -e "$(grep nameserver /etc/resolv.conf | awk '{print $2, "   winhost"}')" | sudo tee -a /etc/hosts
 fi
+
+# Initialize Multiplexer
+# echo 'eval "$(zellij setup --generate-auto-start zsh)"' >> ~/.zshrc
