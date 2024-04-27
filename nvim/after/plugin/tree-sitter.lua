@@ -1,5 +1,12 @@
-require('nvim-ts-autotag').setup()
-
+require('nvim-ts-autotag').setup({
+  filetypes = {
+    "html",
+    "htmldjango",
+    "javascript",
+    "typescript",
+    "go",
+  },
+})
 require'nvim-treesitter.configs'.setup {
   auto_install = true,
 
@@ -8,13 +15,17 @@ require'nvim-treesitter.configs'.setup {
     disable = { "json" },
   },
 
-  autotag = {
+  --[[ autotag = {
     enable = true,
+    enable_close = true,
+    enable_rename = true,
+    enable_close_on_slash = true,
     filetypes = {
       "html",
+      "htmldjango",
       "javascript",
       "typescript",
-      "go"
+      "go",
     },
-  }
+  } ]]
 }

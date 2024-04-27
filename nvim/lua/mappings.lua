@@ -78,8 +78,8 @@ nmap('<leader>n', '<cmd>NvimTreeToggle<cr>')
 
 -- GIT (VIM FUGITIVE)
 nmap('<leader>gs', '<cmd>G<bar> :only<cr>')
-nmap('<leader>gf', '<cmd>diffget //2<cr>')
-nmap('<leader>gh', '<cmd>diffget //3<cr>')
+nmap('<leader>gf', '<cmd>diffget //2<cr>') -- get from left (target)
+nmap('<leader>gh', '<cmd>diffget //3<cr>') -- get from right (source)
 
 -- TODO COMMENTS
 nmap('<leader>tc', '<cmd>TodoTelescope<cr>')

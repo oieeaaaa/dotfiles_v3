@@ -6,17 +6,24 @@ local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false 
 local event = "BufWritePre" -- or "BufWritePost"
 local async = event == "BufWritePost"
 
-
 local sources = {
   formatting.eslint_d,
+  formatting.djlint,
   formatting.prettier_d_slim.with({
      extra_filetypes = {
       "svelte",
       "cshtml",
       "razor"
     },
-  })
+  }),
 }
+
+--[[ diagnostics.mypy.with({
+  extra_args = function()
+  local virtual = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_PREFIX") or "/usr"
+  return { "--python-executable", virtual .. "/bin/python3.12" }
+  end,
+}) ]]
 
 null_ls.setup({
   sources = sources,

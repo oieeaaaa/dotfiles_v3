@@ -6,7 +6,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export VIMRUNTIME="$HOME/vendors/nvim-linux64/share/nvim/runtime"
 
-
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -113,7 +112,11 @@ export VISUAL='nvim'
 #
 # Example aliases
 alias init-work="bash ~/personal/scripts/init-work.sh"
+alias init-personal="bash ~/personal/scripts/init-personal.sh"
 alias awscli="/usr/local/bin/aws"
+alias py="/usr/bin/python3.12"
+alias python="/usr/bin/python3.12"
+alias pip="/usr/bin/pip3.12"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Key bindings
@@ -134,9 +137,10 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/php@8.1/sbin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH="$HOME/go" # set GOPATH (path to where go is installed)
 export PATH=$PATH:$GOPATH/bin # append GOPATH to PATH 
+export PATH="$HOME/.local/bin:$PATH"
 
 # export LOCALSTACK_API_KEY=6Yp3m24xwF
-export LOCALSTACK_API_KEY=3B7BYy2YOH
+export LOCALSTACK_API_KEY="3B7BYy2YOH"
 
 # Add DNS entry for windows host
 if ! $(cat /etc/hosts | grep -q 'winhost'); then
